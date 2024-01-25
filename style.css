@@ -2,6 +2,7 @@
   --cl1-m: #f0f0f0;
   --cl2-m: #67e4b0;
   --cl3-m: #1f1f1f;
+  --cl4-m: #ffffff;
 }
 * {
   margin: 0px;
@@ -33,29 +34,112 @@ article:nth-child(2) {
     cursor: pointer;
   }
   > img:last-child {
-    width: 2vmax;
+    width: 2rem;
     margin: 10px;
     object-fit: cover;
     margin-top: 20vmax;
   }
 }
 article:nth-child(3) {
+  margin: 1rem;
   flex: 3;
   background-color: var(--cl1-m);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  > section:first-child {
+    padding: 10px;
+    width: 90%;
+    background-color: var(--cl4-m);
+    position: relative;
+    display: flex;
+    > img {
+      width: 2rem;
+      padding-right: 10px;
+    }
+    > input {
+      outline: none;
+      border: none;
+      width: 90%;
+      font-size: 1rem;
+    }
+    border-radius: 10px;
+  }
+  > section:nth-child(2) {
+    width: 95%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    > div {
+      background-color: var(--cl4-m);
+      border: none;
+      outline: none;
+      padding: 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      color: var(--cl3-m);
+      margin: 5px;
+    }
+  }
+  .add {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: var(--cl2-m);
+    border: none;
+    font-size: 2rem;
+    padding: 1px 9px;
+    border-radius: 30px;
+    color: var(--cl4-m);
+  }
 }
 article:nth-child(4) {
   flex: 6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.333);
+  > section {
+    border: 0.5px solid rgba(54, 54, 54, 0.15);
+    background-color: var(--cl4-m);
+  }
+  > section:nth-child(1) {
+    width: 100%;
+    padding: 20px;
+  }
+  > section:nth-child(2) {
+    width: 100%;
+    flex: 5;
+    padding: 20px;
+  }
+  > section:nth-child(3) {
+    width: 100%;
+    flex: 1;
+    padding: 20px;
+  }
   background-color: var(--cl1-m);
 }
 article:nth-child(5) {
   flex: 2;
-  background-color: var(--cl1-m);
+  background-color: var(--cl4-m);
 }
 .active {
   display: none !important;
 }
+.message {
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.333);
+}
 @media screen and (max-width: 768px) {
+  html {
+    font-size: 12px;
+  }
   .btn {
     display: block;
+  }
+  #profile {
+    display: none;
   }
 }
