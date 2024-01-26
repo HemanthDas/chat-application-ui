@@ -1,6 +1,7 @@
 :root {
   --cl1-m: #f0f0f0;
   --cl2-m: #67e4b0;
+  --cl2-d: #53af88;
   --cl3-m: #1f1f1f;
   --cl4-m: #ffffff;
 }
@@ -29,9 +30,10 @@ article:nth-child(2) {
 
   > img {
     width: 3rem;
-    margin: 10px;
+    margin: 10px; 
     object-fit: cover;
     cursor: pointer;
+    fill: var(--cl4-m);
   }
   > img:last-child {
     width: 2rem;
@@ -50,6 +52,7 @@ article:nth-child(3) {
   position: relative;
   > section:first-child {
     padding: 10px;
+    
     width: 90%;
     background-color: var(--cl4-m);
     position: relative;
@@ -109,6 +112,8 @@ article:nth-child(4) {
   > section:nth-child(1) {
     width: 100%;
     padding: 20px;
+    background-color: var(--cl3-m);
+    color: var(--cl1-m);
   }
   > section:nth-child(2) {
     width: 100%;
